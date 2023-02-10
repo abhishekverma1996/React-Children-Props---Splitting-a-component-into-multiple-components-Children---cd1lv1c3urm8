@@ -19,7 +19,7 @@ const App = () => {
       <ChildComponent /> 
        <input id='input' value={inputValue} onChange={handleInputChange} />
     
-      <p id='output'>{}</p>
+      <p id='output'>{outputValue}</p>
     </div>
   )
 }
