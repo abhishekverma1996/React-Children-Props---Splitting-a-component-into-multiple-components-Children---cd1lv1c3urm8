@@ -16,8 +16,8 @@ const App = () => {
       <ChildComponent />
       <p id='output'>{Number(input) * Number(input)}</p>
     </div>
-  )
-}
+  );
+};
 
 
 export default App;
