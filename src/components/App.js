@@ -3,23 +3,18 @@ import '../styles/App.css';
 import ChildComponent from './ChildComponent';
 const App = () => {
  //code here
- const [inputValue, setInputValue] = useState('');
-  const [outputValue, setOutputValue] = useState('');
-
-  useEffect(() => {
-    setOutputValue(inputValue ** 2);
-  }, [inputValue]);
+ const [input, setInput] = useState('');
 
   const handleInputChange = (event) => {
-    setInputValue(event.target.value);
+    setInput(event.target.value);
   };
  
   return (
     <div id="main">
-      <ChildComponent /> 
+      <ChildComponent> 
        <input id='input' value={inputValue} onChange={handleInputChange} />
-    
-      <p id='output'>{outputValue}</p>
+      <ChildComponent />
+      <p id='output'>{Number(inputValue) * Number(inputValue)}</p>
     </div>
   )
 }
